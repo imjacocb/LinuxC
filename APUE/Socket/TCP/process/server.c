@@ -89,7 +89,7 @@ int main()
             exit(1);
         }
         if (pid == 0){
-            close(sfd);
+            close(sfd); //重要
             inet_ntop(AF_INET,&raddr.sin_addr,ip,IPSIZE);
             printf("client %s %d\n",ip,ntohs(raddr.sin_port));
             server_job(newsd);
