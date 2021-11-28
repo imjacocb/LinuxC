@@ -47,7 +47,7 @@ int main()
 
   raddr.sin_family = AF_INET;
   raddr.sin_port = htons(atoi(SERVERPORT));
-  inet_pton(AF_INET,"192.168.47.255",&raddr.sin_addr);
+  inet_pton(AF_INET,"0.0.0.0",&raddr.sin_addr);
 
   while(1) {
     if(sendto(sfd,sbuf,pkglen,0,(void *)&raddr,sizeof(raddr)) < 0){

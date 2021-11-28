@@ -55,7 +55,7 @@ int main()
 
     laddr.sin_family = AF_INET;//指定协议
     laddr.sin_port = htons(atoi(SERVERPORT));//指定网络通信端口
-    inet_pton(AF_INET,"0.0.0.0",&laddr.sin_addr);//IPv4点分式转二进制数
+    inet_pton(AF_INET,"255.255.255.255",&laddr.sin_addr);//IPv4点分式转二进制数
 
     if(bind(sfd,(void *)&laddr,sizeof(laddr)) < 0){
         perror("bind()");

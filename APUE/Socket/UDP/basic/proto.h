@@ -8,7 +8,7 @@
 struct msg_st{
     uint32_t math;
     uint32_t chinese;
-    char name[0];
+    char name[0]; //用 name[1]的区别？？
 }__attribute__((packed));//不对齐
 
 #endif
