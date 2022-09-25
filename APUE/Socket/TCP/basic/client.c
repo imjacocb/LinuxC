@@ -43,7 +43,8 @@ int main()
         fprintf(stdout,FMT_STAMP,stamp);
     }
 
-    close(sfd);
+    fclose(fp);
+    //close(sfd);
 
     exit(0);
 }
